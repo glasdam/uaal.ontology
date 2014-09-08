@@ -1,0 +1,10 @@
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <feature name="helloworld" version="1.0.0">
+        <bundle>mvn:commons-codec/commons-codec/1.6</bundle>
+        <bundle>wrap:mvn:org.apache.httpcomponents/fluent-hc/4.3.4</bundle>
+        <bundle>wrap:mvn:org.apache.httpcomponents/httpclient/4.3.4</bundle>
+        <bundle>wrap:mvn:org.apache.httpcomponents/httpcore/4.3.2</bundle>
+        <bundle>wrap:mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
+        <bundle>mvn:dk.medware.hello/helloworld/1.0.0</bundle>
+    </feature>
+</features>
