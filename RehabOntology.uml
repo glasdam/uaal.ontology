@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OWL="http:///schemas/OWL/_8v6kUJ2UEeCA1PJ4jAflww/8" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/OWL/_8v6kUJ2UEeCA1PJ4jAflww/8 pathmap://TwoUse_Profiles/OWL.profile.uml#_8wB5EJ2UEeCA1PJ4jAflww">
+  <uml:Model xmi:id="_APURYDy3EeSHYNjPm1ESvQ" name="RehabOntology">
+    <ownedComment xmi:id="_APURYTy3EeSHYNjPm1ESvQ" annotatedElement="_APURaTy3EeSHYNjPm1ESvQ">
+      <body>Testing ontology</body>
+    </ownedComment>
+    <packageImport xmi:id="_APURYjy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.middleware.owl.uml#_0huTAKFGEeCPiYRKlVcMuQ"/>
+    </packageImport>
+    <packageImport xmi:id="_APURYzy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.phThing.uml#_INViAKFHEeCPiYRKlVcMuQ"/>
+    </packageImport>
+    <packageImport xmi:id="_APURZDy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.middleware.service.owl.uml#_ar8DoPqREeCQQaPCMdH-vA"/>
+    </packageImport>
+    <packageImport xmi:id="_APURZTy3EeSHYNjPm1ESvQ">
+      <importedPackage href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.datatypes.uml#_U7uacGkcEeGIl7HiYaL9OA"/>
+    </packageImport>
+    <packageImport xmi:id="_APURZjy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.unit.uml#_iTg3EEzlEeG4aIoxfVByDw"/>
+    </packageImport>
+    <packageImport xmi:id="_APURZzy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.measurement.uml#__ImLAIn5EeGWy6MmckrVYA"/>
+    </packageImport>
+    <packageImport xmi:id="_APURaDy3EeSHYNjPm1ESvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.device.uml#_UkOj0NJAEeGCrI2l36sLrg"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_APURaTy3EeSHYNjPm1ESvQ" name="org.universAAL.ontology.rehabontology">
+      <ownedComment xmi:id="_APURajy3EeSHYNjPm1ESvQ">
+        <body>The classes in the lower part of the diagram are just example classes that can be renamed or deleted. To create your own classes, select Class from the Ontology palette (to the right). You can also add associations and generalizations from this palette.
+To add properties to the classes, select datatypeProperty (for primitive types) or objectProperty from the Ontology palette and click on the class to add it to. For further instructions, visit the wiki at:
+http://forge.universaal.org/wiki/uaaltools:Ontology_modelling
+You can delete these instruction notes from the model when you do not need them any more.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_APURazy3EeSHYNjPm1ESvQ">
+        <body>The classes at the top of this diagram are base classes taken from the imported packages shown in the Model Explorer view (select Papyrus from the Window/Open Perspective menu). Typically, you will subclass these classes by adding a generalization relation to your own ontology classes. 
+To apply other imported classes, just drag them into the diagram from the Model Explorer.</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_APURbDy3EeSHYNjPm1ESvQ" name="ExerciseAnalyser">
+        <generalization xmi:id="_APURbTy3EeSHYNjPm1ESvQ">
+          <general xmi:type="uml:Class" href="pathmap://AAL_ONTOLOGIES/org.universaal.middleware.service.owl.uml#_utGr4PqREeCQQaPCMdH-vA"/>
+        </generalization>
+        <ownedAttribute xmi:id="_Fc1JADzAEeSHYNjPm1ESvQ" name="exerciseResults" type="_APURcDy3EeSHYNjPm1ESvQ" association="_Fc1wEDzAEeSHYNjPm1ESvQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fc1JATzAEeSHYNjPm1ESvQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fc1JAjzAEeSHYNjPm1ESvQ" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_APURcDy3EeSHYNjPm1ESvQ" name="ExerciseResults">
+        <generalization xmi:id="_APURcTy3EeSHYNjPm1ESvQ">
+          <general xmi:type="uml:Class" href="pathmap://AAL_ONTOLOGIES/org.universaal.middleware.owl.uml#_7clzYKFGEeCPiYRKlVcMuQ"/>
+        </generalization>
+        <ownedAttribute xmi:id="_xzzNkDy3EeSHYNjPm1ESvQ" name="results" isUnique="false">
+          <type xmi:type="uml:DataType" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.datatypes.uml#_gtLPQGkcEeGIl7HiYaL9OA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UGKqkDy4EeSHYNjPm1ESvQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UGI1YDy4EeSHYNjPm1ESvQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Dt170Dy5EeSHYNjPm1ESvQ" name="time" isUnique="false">
+          <type xmi:type="uml:DataType" href="pathmap://AAL_ONTOLOGIES/org.universaal.ontology.datatypes.uml#_gtLPQGkcEeGIl7HiYaL9OA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O8flkDy5EeSHYNjPm1ESvQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O8ciQDy5EeSHYNjPm1ESvQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Fc1wEDzAEeSHYNjPm1ESvQ" name="exerciseAnalyser_exerciseResults_1" memberEnd="_Fc1wETzAEeSHYNjPm1ESvQ _Fc1JADzAEeSHYNjPm1ESvQ">
+        <ownedEnd xmi:id="_Fc1wETzAEeSHYNjPm1ESvQ" name="exerciseAnalyser" type="_APURbDy3EeSHYNjPm1ESvQ" association="_Fc1wEDzAEeSHYNjPm1ESvQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fc1wEjzAEeSHYNjPm1ESvQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fc1wEzzAEeSHYNjPm1ESvQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_APURcjy3EeSHYNjPm1ESvQ">
+      <eAnnotations xmi:id="_APURczy3EeSHYNjPm1ESvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://TwoUse_Profiles/OWL.profile.uml#_8wB5EJ2UEeCA1PJ4jAflww"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://TwoUse_Profiles/OWL.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_APURdDy3EeSHYNjPm1ESvQ">
+      <eAnnotations xmi:id="_APURdTy3EeSHYNjPm1ESvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://TwoUse_Profiles/RDF.profile.uml#_0R89QCqWEd6tAp0dWJ5sSg"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://TwoUse_Profiles/RDF.profile.uml#_TEtTYHGwEdyoJ7Xxsdx7ug"/>
+    </profileApplication>
+  </uml:Model>
+  <OWL:owlOntology xmi:id="_APURdjy3EeSHYNjPm1ESvQ" defaultNamespace="http://ontology.universAAL.org/RehabOntology" base_Package="_APURaTy3EeSHYNjPm1ESvQ" versionInfo="2.0.0"/>
+  <OWL:datatypeProperty xmi:id="_x0NdQDy3EeSHYNjPm1ESvQ" base_Property="_xzzNkDy3EeSHYNjPm1ESvQ" isFunctional="true"/>
+  <OWL:datatypeProperty xmi:id="_Dt5mMDy5EeSHYNjPm1ESvQ" base_Property="_Dt170Dy5EeSHYNjPm1ESvQ" isFunctional="true"/>
+</xmi:XMI>
