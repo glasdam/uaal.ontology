@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>dk.medware.genoptraen</groupId>
-  <artifactId>uaal</artifactId>
+  <groupId>dk.medware.genoptraen.uaal</groupId>
+  <artifactId>ontology</artifactId>
   <version>1.0.0</version>
-  <name>UAAL</name>
+  <name>UAAL Ontology</name>
   <description>Will start something beautiful</description>
 	<packaging>bundle</packaging>
 	<dependencies>
@@ -70,7 +70,7 @@
 				<configuration>
 					<instructions>
 						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Activator>mainpackage.Activator</Bundle-Activator>
+						<Bundle-Activator>dk.medware.genoptraen.ontology.Activator</Bundle-Activator>
 						<Bundle-Description>${project.description}</Bundle-Description>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>org.osgi.framework;version="[1,2)",*</Import-Package>

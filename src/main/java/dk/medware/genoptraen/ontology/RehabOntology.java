@@ -1,6 +1,5 @@
-package mainpackage;
+package dk.medware.genoptraen.ontology;
 
-import org.universAAL.middleware.owl.OntClassInfoSetup;
 import org.universAAL.middleware.owl.Ontology;
 
 public class RehabOntology extends Ontology {

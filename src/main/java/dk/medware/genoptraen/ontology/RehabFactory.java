@@ -1,4 +1,4 @@
-package mainpackage;
+package dk.medware.genoptraen.ontology;
 
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.ResourceFactory;
