@@ -17,6 +17,8 @@ public class ExerciseAnalyser extends Service {
     + "ExerciseAnalyser";
   public static final String PROP_EXERCISE_RESULTS = RehabontologyOntology.NAMESPACE
     + "exerciseResults";
+  public static final String PROP_SUGGESTION_RESULT = RehabontologyOntology.NAMESPACE
+		    + "suggestionResult";
 
 
   public ExerciseAnalyser () {
@@ -49,6 +51,15 @@ public class ExerciseAnalyser extends Service {
   public void setExerciseResults(ExerciseResults newPropValue) {
     if (newPropValue != null)
       changeProperty(PROP_EXERCISE_RESULTS, newPropValue);
-  }		
+  }
+  
+  public SuggestionResult getSuggestionResult() {
+	    return (SuggestionResult)getProperty(PROP_SUGGESTION_RESULT);
+}		
+
+  public void setResults(ExerciseResults newPropValue) {
+	    if (newPropValue != null)
+	      changeProperty(PROP_SUGGESTION_RESULT, newPropValue);
+	  }
 
 }

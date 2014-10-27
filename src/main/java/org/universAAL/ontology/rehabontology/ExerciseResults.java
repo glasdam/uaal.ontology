@@ -50,22 +50,22 @@ public class ExerciseResults extends ManagedIndividual {
       && hasProperty(PROP_TIME);
   }
 
-  public Long[] getResults() {
+  public Double[] getResults() {
     Object propList = getProperty(PROP_RESULTS);
     if (propList instanceof List)
-      return (Long[]) ((List) propList).toArray(new Long[0]);
+      return (Double[]) ((List) propList).toArray(new Double[0]);
     else if (propList != null)
-      return new Long[] {(Long)propList}; // Handle special case of a single item not contained in a list
-    return new Long[0];
+      return new Double[] {(Double)propList}; // Handle special case of a single item not contained in a list
+    return new Double[0];
   }
 
-  public void addResults(Long newValue) {
+  public void addResults(Double newValue) {
     Object propList = getProperty(PROP_RESULTS);
-    List newList;
+    List<Object> newList;
     if (propList instanceof List)
-      newList = (List)propList;
+      newList = (List<Object>)propList;
     else {
-      newList = new ArrayList();
+      newList = new ArrayList<Object>();
       if (propList != null)
         newList.add(propList); // Handle special case of a single previous item not contained in a list
     }
@@ -74,30 +74,30 @@ public class ExerciseResults extends ManagedIndividual {
   }
   
 
-  public void setResults(Long[] propertyValue) {
-    List propList = new ArrayList(propertyValue.length);
+  public void setResults(Double[] propertyValue) {
+    List<Double> propList = new ArrayList<Double>(propertyValue.length);
     for (int i = 0; i < propertyValue.length; i++) {
       propList.add(propertyValue[i]);
     }
     changeProperty(PROP_RESULTS, propList);
   }
 
-  public Long[] getTime() {
+  public Double[] getTime() {
     Object propList = getProperty(PROP_TIME);
     if (propList instanceof List)
-      return (Long[]) ((List) propList).toArray(new Long[0]);
+      return (Double[]) ((List) propList).toArray(new Double[0]);
     else if (propList != null)
-      return new Long[] {(Long)propList}; // Handle special case of a single item not contained in a list
-    return new Long[0];
+      return new Double[] {(Double)propList}; // Handle special case of a single item not contained in a list
+    return new Double[0];
   }
 
-  public void addTime(Long newValue) {
+  public void addTime(Double newValue) {
     Object propList = getProperty(PROP_TIME);
-    List newList;
+    List<Object> newList;
     if (propList instanceof List)
-      newList = (List)propList;
+      newList = (List<Object>)propList;
     else {
-      newList = new ArrayList();
+      newList = new ArrayList<Object>();
       if (propList != null)
         newList.add(propList); // Handle special case of a single previous item not contained in a list
     }
@@ -106,8 +106,8 @@ public class ExerciseResults extends ManagedIndividual {
   }
   
 
-  public void setTime(Long[] propertyValue) {
-    List propList = new ArrayList(propertyValue.length);
+  public void setTime(Double[] propertyValue) {
+    List<Double> propList = new ArrayList<Double>(propertyValue.length);
     for (int i = 0; i < propertyValue.length; i++) {
       propList.add(propertyValue[i]);
     }
