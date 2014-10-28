@@ -25,48 +25,63 @@ import org.universAAL.ontology.space.SpaceOntology;
  */
 public final class RehabontologyOntology extends Ontology {
 
-  private static RehabontologyFactory factory = new RehabontologyFactory();
-  public static final String NAMESPACE ="http://ontology.universAAL.org/RehabOntology#";
-	
-  public RehabontologyOntology() {
-    super(NAMESPACE);
-  }
+	private static RehabontologyFactory factory = new RehabontologyFactory();
+	public static final String NAMESPACE ="http://ontology.universAAL.org/RehabOntology#";
 
-  public void create() {
-    Resource r = getInfo();
-    r.setResourceComment("Testing ontology");
-    r.setResourceLabel("rehabontology");
-    addImport(DataRepOntology.NAMESPACE);
-    addImport(ServiceBusOntology.NAMESPACE);
-    addImport(LocationOntology.NAMESPACE);
-    addImport(PhThingOntology.NAMESPACE);
-    addImport(ShapeOntology.NAMESPACE);
-    addImport(SpaceOntology.NAMESPACE);
-    // TODO: Add any additionally imported ontologies here
-    
+	public RehabontologyOntology() {
+		super(NAMESPACE);
+	}
 
-    // ******* Declaration of regular classes of the ontology ******* //
-    OntClassInfoSetup oci_ExerciseResults = createNewOntClassInfo(ExerciseResults.MY_URI, factory, 0);
-    OntClassInfoSetup oci_ExerciseAnalyser = createNewOntClassInfo(ExerciseAnalyser.MY_URI, factory, 1);
+	public void create() {
+		Resource r = getInfo();
+		r.setResourceComment("Testing ontology");
+		r.setResourceLabel("rehabontology");
+		addImport(DataRepOntology.NAMESPACE);
+		addImport(ServiceBusOntology.NAMESPACE);
+		addImport(LocationOntology.NAMESPACE);
+		addImport(PhThingOntology.NAMESPACE);
+		addImport(ShapeOntology.NAMESPACE);
+		addImport(SpaceOntology.NAMESPACE);
+		// TODO: Add any additionally imported ontologies here
 
-    // ******* Add content to regular classes of the ontology ******* //
-    oci_ExerciseResults.setResourceComment("");
-    oci_ExerciseResults.setResourceLabel("ExerciseResults");
-    oci_ExerciseResults.addSuperClass(ManagedIndividual.MY_URI); 
-    oci_ExerciseResults.addDatatypeProperty(ExerciseResults.PROP_RESULTS).setFunctional();
-      	oci_ExerciseResults.addRestriction(MergedRestriction.getAllValuesRestriction(ExerciseResults.PROP_RESULTS,  
-       	TypeMapper.getDatatypeURI(Long.class)));
-    oci_ExerciseResults.addDatatypeProperty(ExerciseResults.PROP_TIME).setFunctional();
-      	oci_ExerciseResults.addRestriction(MergedRestriction.getAllValuesRestriction(ExerciseResults.PROP_TIME,  
-       	TypeMapper.getDatatypeURI(Long.class)));
 
-    oci_ExerciseAnalyser.setResourceComment("");
-    oci_ExerciseAnalyser.setResourceLabel("ExerciseAnalyser");
-    oci_ExerciseAnalyser.addSuperClass(Service.MY_URI); 
-    oci_ExerciseAnalyser.addObjectProperty(ExerciseAnalyser.PROP_EXERCISE_RESULTS).setFunctional();
-    oci_ExerciseAnalyser.addRestriction(MergedRestriction
-      .getAllValuesRestrictionWithCardinality(ExerciseAnalyser.PROP_EXERCISE_RESULTS, 
-          ExerciseResults.MY_URI, 1, 1));
+		// ******* Declaration of regular classes of the ontology ******* //
+		OntClassInfoSetup oci_ExerciseResults = createNewOntClassInfo(ExerciseResults.MY_URI, factory, 0);
+		OntClassInfoSetup oci_ExerciseAnalyser = createNewOntClassInfo(ExerciseAnalyser.MY_URI, factory, 1);
+		OntClassInfoSetup oci_SuggestionResult = createNewOntClassInfo(SuggestionResult.MY_URI, factory, 2);
 
-  }
+		// ******* Add content to regular classes of the ontology ******* //
+		oci_ExerciseResults.setResourceComment("");
+		oci_ExerciseResults.setResourceLabel("ExerciseResults");
+		oci_ExerciseResults.addSuperClass(ManagedIndividual.MY_URI); 
+		oci_ExerciseResults.addDatatypeProperty(ExerciseResults.PROP_RESULTS).setFunctional();
+		oci_ExerciseResults.addRestriction(MergedRestriction.getAllValuesRestriction(ExerciseResults.PROP_RESULTS,  
+				TypeMapper.getDatatypeURI(Double.class)));
+		oci_ExerciseResults.addDatatypeProperty(ExerciseResults.PROP_TIME).setFunctional();
+		oci_ExerciseResults.addRestriction(MergedRestriction.getAllValuesRestriction(ExerciseResults.PROP_TIME,  
+				TypeMapper.getDatatypeURI(Double.class)));
+		// SUGGESTION_RESULT SETUP
+		oci_SuggestionResult.setResourceComment("");
+		oci_SuggestionResult.setResourceLabel("ExerciseResults");
+		oci_SuggestionResult.addSuperClass(ManagedIndividual.MY_URI); 
+		oci_SuggestionResult.addDatatypeProperty(SuggestionResult.PROP_SLOPE).setFunctional();
+		oci_SuggestionResult.addRestriction(MergedRestriction.getAllValuesRestriction(SuggestionResult.PROP_SLOPE,  
+				TypeMapper.getDatatypeURI(Double.class)));
+		oci_SuggestionResult.addDatatypeProperty(SuggestionResult.PROP_ESTIMATE).setFunctional();
+		oci_SuggestionResult.addRestriction(MergedRestriction.getAllValuesRestriction(SuggestionResult.PROP_ESTIMATE,  
+				TypeMapper.getDatatypeURI(Double.class)));
+		oci_SuggestionResult.addDatatypeProperty(SuggestionResult.PROP_RECOMMENDATION).setFunctional();
+		oci_SuggestionResult.addRestriction(MergedRestriction.getAllValuesRestriction(SuggestionResult.PROP_RECOMMENDATION,  
+				TypeMapper.getDatatypeURI(Double.class)));
+
+
+		oci_ExerciseAnalyser.setResourceComment("");
+		oci_ExerciseAnalyser.setResourceLabel("ExerciseAnalyser");
+		oci_ExerciseAnalyser.addSuperClass(Service.MY_URI); 
+		oci_ExerciseAnalyser.addObjectProperty(ExerciseAnalyser.PROP_EXERCISE_RESULTS).setFunctional();
+		oci_ExerciseAnalyser.addRestriction(MergedRestriction
+				.getAllValuesRestrictionWithCardinality(ExerciseAnalyser.PROP_EXERCISE_RESULTS, 
+						ExerciseResults.MY_URI, 1, 1));
+
+	}
 }

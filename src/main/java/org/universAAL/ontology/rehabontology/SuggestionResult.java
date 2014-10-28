@@ -12,6 +12,14 @@ public class SuggestionResult extends ManagedIndividual {
 	public static final String PROP_RECOMMENDATION = RehabontologyOntology.NAMESPACE
 			+ "recommendation";
 
+	public SuggestionResult(){
+		super();
+	}
+
+	public SuggestionResult(String instanceURI) {
+		super(instanceURI);
+	}
+
 	public String getClassURI() {
 		return MY_URI;
 	}
