@@ -4,7 +4,7 @@ import org.universAAL.middleware.owl.ManagedIndividual;
 
 public class SuggestionResult extends ManagedIndividual {
 	public static final String MY_URI = RehabontologyOntology.NAMESPACE
-			+ "ExerciseResults";
+			+ "SuggestionResult";
 	public static final String PROP_SLOPE = RehabontologyOntology.NAMESPACE
 			+ "slope";
 	public static final String PROP_ESTIMATE = RehabontologyOntology.NAMESPACE
@@ -63,6 +63,15 @@ public class SuggestionResult extends ManagedIndividual {
 	}
 	public void setRecommendation(Double propertyValue) {
 		changeProperty(PROP_RECOMMENDATION, propertyValue);
+	}
+	
+	public String toString(){
+		StringBuffer text = new StringBuffer();
+		text.append('\n');
+		text.append("\nSlope:          "+getSlope());
+		text.append("\nEstimate:       "+getEstimate());
+		text.append("\nRecommendation: "+getRecommendation());
+		return text.toString();
 	}
 
 

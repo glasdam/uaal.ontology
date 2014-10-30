@@ -62,7 +62,7 @@ public final class RehabontologyOntology extends Ontology {
 				TypeMapper.getDatatypeURI(Double.class)));
 		// SUGGESTION_RESULT SETUP
 		oci_SuggestionResult.setResourceComment("");
-		oci_SuggestionResult.setResourceLabel("ExerciseResults");
+		oci_SuggestionResult.setResourceLabel("SuggestionResult");
 		oci_SuggestionResult.addSuperClass(ManagedIndividual.MY_URI); 
 		oci_SuggestionResult.addDatatypeProperty(SuggestionResult.PROP_SLOPE).setFunctional();
 		oci_SuggestionResult.addRestriction(MergedRestriction.getAllValuesRestriction(SuggestionResult.PROP_SLOPE,  

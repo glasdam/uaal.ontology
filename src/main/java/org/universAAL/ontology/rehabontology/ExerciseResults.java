@@ -115,5 +115,13 @@ public class ExerciseResults extends ManagedIndividual {
 		}
 		changeProperty(PROP_TIME, propList);
 	}
+	
+	public String toString(){
+		StringBuffer text = new StringBuffer();
+		text.append('\n');
+		text.append("\nResults: "+getResults());
+		text.append("\nTime:    "+getTime());
+		return text.toString();
+	}
 
 }
