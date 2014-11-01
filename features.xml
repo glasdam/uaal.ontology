@@ -5,5 +5,8 @@
         <bundle>wrap:mvn:org.apache.httpcomponents/httpclient/4.3.4</bundle>
         <bundle>wrap:mvn:org.apache.httpcomponents/httpcore/4.3.2</bundle>
         <bundle>wrap:mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
+        <bundle>mvn:org.universAAL.ontology/org.universAAL.ontology.rehabontology/2.0.1</bundle>
+        <bundle>mvn:dk.medware.rehab.uaal/callee/1</bundle>
+        <bundle>mvn:dk.medware.rehab.uaal/caller/1</bundle>
     </feature>
 </features>

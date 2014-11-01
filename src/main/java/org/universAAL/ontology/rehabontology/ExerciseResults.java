@@ -50,15 +50,17 @@ public class ExerciseResults extends ManagedIndividual {
 				&& hasProperty(PROP_TIME);
 	}
 
+	@SuppressWarnings("unchecked")
 	public Double[] getResults() {
 		Object propList = getProperty(PROP_RESULTS);
 		if (propList instanceof List)
-			return (Double[]) ((List) propList).toArray(new Double[0]);
+			return (Double[]) ((List<Object>) propList).toArray(new Double[0]);
 		else if (propList != null)
 			return new Double[] {(Double)propList}; // Handle special case of a single item not contained in a list
 		return new Double[0];
 	}
 
+	@SuppressWarnings("unchecked")
 	public void addResults(Double newValue) {
 		Object propList = getProperty(PROP_RESULTS);
 		List<Object> newList;
