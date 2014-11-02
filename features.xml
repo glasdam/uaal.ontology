@@ -1,5 +1,5 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <feature name="medware_dependencies" version="1.0.0">
+    <feature name="medware_rehab" version="1.0.0">
         <bundle>mvn:commons-codec/commons-codec/1.6</bundle>
         <bundle>wrap:mvn:org.apache.httpcomponents/fluent-hc/4.3.4</bundle>
         <bundle>wrap:mvn:org.apache.httpcomponents/httpclient/4.3.4</bundle>
